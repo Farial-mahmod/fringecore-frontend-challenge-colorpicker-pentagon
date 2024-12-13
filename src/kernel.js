@@ -49,6 +49,19 @@ export const kernelFunction = function (width, height, hue) {
   b *= colorValue;
 
   // conditional check for the the appropriate channel value
-
+  switch (channel) {
+    case 0:
+      // Red
+      return Math.floor(r * 255); 
+    case 1:
+      // Green
+      return Math.floor(g * 255); 
+    case 2:
+      // Blue
+      return Math.floor(b * 255); 
+    case 3:
+      // full opaque
+      return 255; 
+  }
 };
 
